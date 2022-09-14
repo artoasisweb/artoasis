@@ -1,28 +1,27 @@
----
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import construction from '../images/image.png';
----
+        ---
+        import construction from '../images/image.png';
+        ---
+<style>
+    hero {
+        height: 100%;
+    }
 
-<html lang="en">
-    <style>
-	    hero {      display: flex;
-                    justify-content: center;
-	    			position: relative;
-	    			overflow: hidden;
-	    		}
-	    img {
-	    			display: block;
-	    			width: 80%;
-	    			height: auto;
-	    		}
-    </style>
+    img {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+
+
+    }
+</style>
+
+<html>
     <body class="hero">
-		<img
-			class="img"
-			src={construction}
-			sizes="(max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px, (max-width: 2400px) 2400px, 1200px"
-		/>
-
-	</body>
+    <img
+            class="img"
+            src={construction}
+    />
+    </body>
 </html>
